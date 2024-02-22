@@ -1,0 +1,148 @@
+# Write a program to read 5 integer number and print sum and average
+def CalculateSum():
+    num1=int(input("Enter 1st number "))
+    num2=int(input("Enter 2nd number "))
+    num3=int(input("Enter 3rd number "))
+    num4=int(input("Enter 4th number "))
+    num5=int(input("Enter 5th number "))
+    sum= num1+num2+num3+num4+num5
+    avg=sum/5
+    print("Total sum =",sum)
+    print("Average =",avg)
+my_fun()
+
+#number gyessing game
+magic_number=77
+while True:
+    guess_num=int(input("enter a guess number"))
+    if guess_num > magic_number:
+        print("The number is to high")
+    elif guess_num < magic_number:
+        print("The number is to low")
+    elif guess_num == magic_number:
+        print("You got it")
+        break
+
+magic_num=56
+while True:
+    guess_num=int(input("enter a guess number"))
+    if guess_num == magic_num:
+        print("You got it")
+        break
+    else:
+        print("oh sorry try again")
+        
+#fibonacci series using for loop
+Unum=int(input("enter a number"))
+if Unum<=0:
+    print("plz enter valid number")
+else:
+    num1=0
+    num2=1
+    res=0
+    print(num1)
+    print(num2)
+    for i in range(2,Unum):
+        res=0
+        res=num1+num2
+        print(res)
+        num1=num2
+        num2=res
+
+#fibonnic series using while loop
+unum=int(input("plz enter anumber"))
+if unum <=0:
+    print("plz enter valid num ")
+else:
+    num1=0
+    num2=1
+    print(num1)
+    print(num2)
+    count=2
+    while count<unum:
+        res=num1+num2
+        print(res)
+        num1=num2
+        num2=res
+        count+=1
+
+#reverse of a number by using for loop
+unum=int(input("enter a number "))
+if unum==0:
+    print("plz enter valid number")
+else:
+    while unum>0:
+        rev=0
+        reminder=unum%10 
+        rev=rev*10+reminder 
+        unum//=10
+        print(rev)
+
+#reverse a stringb
+inpstr=input("enter a string")
+oustr=''
+for i in inpstr:
+    oustr=i+oustr
+print(oustr)
+
+
+#armstrong number
+ipNum=int(input("enter a number to check it is armstrong or not: "))
+lenip=len(str(ipNum))
+opNum=0
+n=ipNum
+while n>0:
+    reminder=n%10
+    opNum=opNum+(reminder**lenip)
+    n//=10
+    #print(opNum)
+if ipNum==opNum:
+    print("number is armstrong")
+else:
+    print("number is not an armstrongS")
+
+
+ #table
+ipnum=int(input("enter a number"))
+n=1
+while n<11:
+    res=ipnum*n
+    n+=1
+    print(res)
+
+#fectorial
+ip=int(input("enter a number"))
+res=1
+for i in range(1,ip+1):
+    res=res*i
+print(res)
+
+#natural number
+ipvalue=int(input("enter a number"))
+res=0
+for i in range(ipvalue+1):
+    res=i+res
+print(res)
+
+
+#even number
+ipvalue=int(input("enter a number: "))
+if ipvalue%2==0:
+    print("even number")
+else:
+    print("odd number")
+
+#odd number
+ipvalue=int(input("enter a number"))
+if ipvalue%2!=0:
+    print("odd number")
+else:
+    print("even number")
+#prime
+ipvalue=int(input("enter a number "))
+for i in range(2,ipvalue):
+    if(ipvalue%i==0):
+        print("num is not a prime")
+        break
+else:
+    print("prime")
