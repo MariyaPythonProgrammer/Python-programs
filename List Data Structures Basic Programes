@@ -1,0 +1,144 @@
+#Write a Python program to sum all the items in a list.
+list1=[2,3,4,1,6]
+res=0
+for i in list1:
+   res+=i
+print(res)
+
+#Write a Python program to multiply all the items in a list.
+list1=[2,3,4,5]
+res=1
+for i in list1:
+    res*=i
+print(res)
+
+#Write a Python program to get the largest number from a list.
+list1=[8,7,9,2]
+maxi=list1[0]
+for i in list1:
+    if i>maxi :
+        maxi=i
+print(maxi)
+    
+list1.sort()
+print(list1[-1])
+n=max(list1)
+print(n)
+
+#Write a Python program to get the smallest number from a list
+list1=[6,5,3,6,7,2]
+mini=list1[0]
+for i in list1:
+    if i<mini:
+        mini=i
+print(mini)
+list1.sort()
+print(list1[0])
+n=min(list1)
+print(n)
+
+
+#Write a Python program to remove duplicates from a list.
+list1=[4,45,44,34,45,4]
+dupl=[]
+newl=[]
+for i in list1:
+    if i not in dupl:
+        newl.append(i)
+        dupl.append(i)
+print(newl)
+
+#Write a Python program to check if a list is empty or not.
+list1=[]
+l=[]
+if list1==l:   #if not list1
+    print("empty list")
+else:
+    print("list is not empty")
+
+#Write a Python program to clone or copy a list.
+list1=[1,22,25,1,5]
+list2=[]
+list2=list1.copy()
+print(list2)
+
+#Write a Python program to find the list of words that are longer than n from a given list of words.
+def FindLongerWord(n):
+    sent="hello everyone mariya here how are you guys"
+    txt=sent.split(" ")
+    newlist=[]
+    for i in txt:
+        le=len(i)
+        if le>n:
+            newlist.append(i)
+    print(newlist)
+FindLongerWord(3)
+
+#Write a Python function that takes two lists and returns True if they have at least one common member.
+def CheckCommonMem():
+    list1=list(input("enter list member "))
+    list2=list(input("enter list member "))
+    for i in list1:
+        for j in list2:
+            if i==j:
+                res= True
+                return print(res)
+CheckCommonMem()
+
+# Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+#Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+list1=['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+list1.pop()
+list1.pop(4)
+list1.remove('Red')
+print(list1)
+
+# Write a Python program to print the numbers of a specified list after removing even numbers from it.
+lis=[4,5,7,6,3,2,11,45,12,34,65,78]
+newlis=[]
+for i in lis:
+    if i%2==0:
+        newlis.append(i)
+print(newlis)
+
+# Write a Python program to shuffle and print a specified list.
+from random import shuffle
+list1=['one',2,'three',4,'five']
+shuffle(list1)
+print(shuffle)
+
+#Write a Python program to generate and print a list of the first and last 5 elements where the values are square numbers between 1 and 30
+lis=[]
+res=0
+for i in range(1,31):
+    res=i**2
+    lis.append(res)
+print(lis[:5])
+print(lis[-5:])
+
+# Write a Python program to Zip two given lists of lists.
+lis1=[[1, 3], [5, 7], [9, 11]]
+lis2=[[2, 4], [6, 8], [10, 12, 14]]
+lis1.extend(lis2)
+print(lis1)
+
+#Write a Python program to count the number of lists in a given list of lists.
+lis1=[[1, 3], [5, 7], [9, 11], [13, 15, 17]]
+lenlis=len(lis1)
+print(inn)
+
+#Write a Python program to find a list with maximum and minimum lengths.
+olis=[[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
+maxi=max(olis)
+lenmax=len(maxi)
+print(f"maximum list {maxi} n len of maximum list {lenmax}")
+mini=min(olis)
+lenmin=len(mini)
+print(f"minimum list {mini} n len of minimum list {lenmin}")
+
+#Write a Python program to sort each sublist of strings in a given list of lists.
+Orilis=[[2], [0], [1, 3], [0, 7], [9, 11], [13, 15, 17]]
+Orilis.sort()
+print(Orilis)
+Orilis.sort(reverse=True)
+print(Orilis)
